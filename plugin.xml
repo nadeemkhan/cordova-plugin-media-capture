@@ -139,12 +139,19 @@ xmlns:rim="http://www.blackberry.com/ns/widgets"
                 <param name="ios-package" value="CDVCapture" />
             </feature>
         </config-file>
+      <config-file target="*-Info.plist" parent="CFBundleLocalizations">
+          <key>CFBundleLocalizations</key>
+              <array>
+                <string>en</string>
+              </array>
+        </config-file>
         <header-file src="src/ios/CDVCapture.h" />
         <source-file src="src/ios/CDVCapture.m" />
         <resource-file src="src/ios/CDVCapture.bundle" />
 
         <framework src="CoreGraphics.framework" />
         <framework src="MobileCoreServices.framework" />
+      
 
         <preference name="CAMERA_USAGE_DESCRIPTION" default=" " />
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
